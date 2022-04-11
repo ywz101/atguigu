@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_字面量</title>
+    <script>
+        /*
+            字面量
+                - 字面量就表示的是一个值, 它所表示的意思就是它的字面意思;
+                - 比如：1, 2, 3, 'hello', true ...
+                - 字面量可以在JS中直接使用, 但是通常不会这么做;
+
+            变量
+                - 变量可以用来存储字面量，一个变量可以存储任意类型的字面量;
+                - 我们一般都是通过变量去存储字面量而不是直接使用字面量;
+
+                - 变量的使用
+                    声明变量：
+                        - 使用 let 关键字来声明变量
+                            let a;
+                            let b, c, d;  // 同时声明3个变量
+                    为变量赋值
+                            a = xxx;
+                            b = xxx;
+
+                    - 声明和赋值同时进行
+                            let a = xxx;
+                            let b = xxx, c = yyy, d = zzz; // 同时声明多个变量并进行赋值
+
+            
+            常量
+
+        */
+
+
+        // 创建(声明)一个变量
+        let a;
+        // 为变量赋值
+        a = 1;
+        // 输出变量a
+        alert(a);   // 1
+
+        // 在开发中，一般声明和赋值同时进行
+        let age = 33;
+        alert(age);
+
+
+        const sex = 'male';
+        // sex = 'female';         // 常量sex, 不能重新赋值, Assignment to constant variable.
+        alert(sex);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

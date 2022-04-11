@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_while循环</title>
+</head>
+
+<body>
+    <script>
+        // let i = 1;
+        // while (i <= 10) {
+        //     i++;    // while循环终止必要条件 (更新表达式)
+        //     document.write('今天天气真不错!<br>');
+        // }
+
+        // 条件表达式恒为 true 的循环，叫做死循环，会一直执行下去
+        // while (true) {
+        //     alert('hello');
+        // }
+
+
+        // 定义一个变量表示初始本金
+        let money = 1000;
+        // 定义一个计数器
+        let count = 0;
+        // 创建一个循环，来模拟存钱的情况
+        while (money < 5000) {
+            money *= 1.05;
+            count++;
+        }
+        console.log(`一共存了${count}年!`);
+    </script>
+</body>
+
+</html>

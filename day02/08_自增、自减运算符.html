@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_自增、自减运算符</title>
+</head>
+
+<body>
+    <script>
+        /*
+            自增 (++)
+                - 自增分为前++ 和 后++
+                = 无论是++a还是a++，对于a来说都是一样，都会使变量a立刻增加1
+                - ++a 和 a++ 的返回结果不同
+
+
+            自减 (--)
+                - 自减分为前-- 和 后--
+                
+        */
+
+        let a = 10;
+        a++;
+        console.log(a);         // 11
+
+        let b = 10;
+        ++b;
+        console.log(b);         // 11
+
+        // 返回变量自增后的值
+        console.log(++b);       // 12
+        // 返回变量自增前的值 
+        console.log(b++);       // 12
+
+
+        let c = 10;
+        let result = c++ + ++c + c;
+        console.log(result);         // 34
+
+    </script>
+</body>
+
+</html>

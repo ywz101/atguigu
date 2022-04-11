@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_for循环练习</title>
+</head>
+
+<body>
+    <script>
+        // 练习7：求100以内所有7的倍数之和，以及个数
+        let sum = 0;
+        let count = 0;
+        for (let i = 7; i < 100; i++) {
+            if (i % 7 === 0) {
+                sum += i;
+                count++;
+            }
+        }
+        console.log(`7的倍数之和为${sum}, 有${count}个。`);
+
+        // 练习7：求100以内所有7的倍数之和，以及个数
+        let sum2 = 0;
+        let count2 = 0;
+        for (let i = 7; i < 100; i += 7) {
+            sum2 += i;
+            count2++;
+        }
+        console.log(`7的倍数之和为${sum}, 有${count}个。`);
+    </script>
+</body>
+
+</html>

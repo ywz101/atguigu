@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_一元运算符</title>
+</head>
+
+<body>
+    <script>
+        /*
+            typeof 
+                - 检查一个值的类型
+
+            +   
+                - 一元的+ (正号)
+                - 不会对数值产生任何影响
+                - 利用+，可以将一个任意类型的值转为数值
+                    原理同Number()函数，但是更加简单
+
+            - 
+                - 一元的- (负号)
+                - 会对数值进行符号位取反
+        */
+
+        let a = 10;
+        a = +a;
+        console.log(a);         // 10
+
+        a = -a;
+        console.log(a);         // -10
+
+
+        a = true;
+        a = -a;
+        console.log(a);         // -1
+
+
+        let b = 1 + +'2' + 3;
+        console.log(b);         // 6
+    </script>
+</body>
+
+</html>

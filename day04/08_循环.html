@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_循环</title>
+</head>
+
+<body>
+    <script>
+        // 求100以内所有的质数
+
+        // 获取2~100以内所有的数
+        for (let i = 2; i < 100; i++) {
+            // 检查i是否是质数
+            // 默认认为i是质数，创建一个变量，记录不的状态
+            let flag = true;
+            // 获取所有可能整除i的数 (除了1和i本身)
+            for (let j = 2; j < i; j++) {
+                // 检查 i 能否被 j 整除
+                if (i % j === 0) {
+                    // 进入判断，说明 i 一定不是质数，修改flag为false
+                    flag = false;
+                }
+            }
+            // 判断
+            if (flag) {
+                console.log(`100以内所有的质数有: ${i}`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

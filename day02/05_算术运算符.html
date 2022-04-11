@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_算术运算符</title>
+    <script>
+        /* 
+            运算符(操作符)
+                - 通过运算符可以对一个值或多个值进行各种运算
+                - 对一个值进行运算，称为一元运算符，如 typeof 
+                - 对两个值进行运算，称为二元运算符, 以此类推
+
+
+                - 算术运算符
+                    +
+                    -
+                    *
+                    ** (幂运算)求一个值的几次幂
+                    /
+                    %  (取模(余)运算)
+        */
+
+        let result = 10 + 33;
+        console.log(result);        // 43
+
+        result = 10 - 5;
+        console.log(result);        // 5
+
+        result = 2 ** 2;
+        console.log(result);        // 4
+
+        // 如果对两个字符串做加法运算，则会将两个字符串拼接为一个
+        result = 'hello' + 'World';
+        console.log(result);        // 'helloWorld'
+
+        // 如果对布尔值进行加法运算，则会将布尔值先转为数字
+        result = true + false;
+        console.log(result);       // 1
+
+        // 除了字符串的加法以外，对其他类型的值进行算术运算时
+            // 都会转换为数值然后再进行运算
+
+        // 任何值和NaN做任何运算结果都是NaN(除了字符串中加法)
+        result = 33 - NaN;
+        console.log(result);        // NaN
+
+        result = 33 - undefined;    // undefined -> NaN
+        console.log(result);        // NaN
+
+        // 可以通过为一个任意值 -0，*1等方式，将其转为
+       </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

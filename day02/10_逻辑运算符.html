@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_逻辑运算符</title>
+</head>
+
+<body>
+    <script>
+        /*
+            逻辑运算符
+                ! 逻辑非
+                    - ! 可以对一个值进行非运算 (取反操作)
+                    - !! 利用 !!value快速将一个非布尔值value转为布尔值
+
+                && 逻辑与
+                    - && 可以对符号左右两侧的值进行与运算
+                    - 如果两侧的值都是 true ，则返回 true, 否则返回 false
+                    - 与运算是短路运算
+                        - 如果第一个值是 false，则不会去看第二个值，直接返回 false
+
+                || 逻辑或
+                    - || 可以将符号左右两侧的值进行或运算
+        */
+
+        let num = 10;
+        num = !num;
+        console.log(num);           // false
+        // 利用 !!value快速将一个非布尔值value转为布尔值
+        let a = 10;
+        a = !!a;
+        console.log(a);             // true
+
+        // && 运算，短路, 如果第一个值是 false，则不会看第二个值
+        // true && alert('hello');
+        false && alert('hello');    // 与运算短路，不会弹出警告框
+
+        // || 运算，短路，如果第一个值是 true，则不会看第二个值
+        true || alert('hello');     // 或运算短路，不会弹出警告框
+
+    </script>
+</body>
+
+</html>

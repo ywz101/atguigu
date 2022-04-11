@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_类型转换数值</title>
+    <script>
+        // '123' -> 123
+        let a = '123';
+        console.log(a, typeof a);   // 123 string
+        // 使用 Number()函数来将一个其他类型转换为数字
+        a = Number(a);
+        console.log(a, typeof a);   // 123 number
+
+        // 转换情况，如果字符串是一个合法数字，则直接转为对应的数字
+        // 如果字符串不是一个合法数字，则转换为NaN
+        // string -> NaN
+        let b = 'abc';
+        b = Number(b);
+        console.log(b, typeof b);   // NaN number
+        // 如果是布尔值, true转为1，false转为0
+        // true -> 1
+        let c = true;
+        c = Number(c);
+        console.log(c, typeof c);   // 1 number
+        // false -> 0
+        let d = false;
+        d = Number(d);
+        console.log(d, typeof d);   // 0 number
+        // null -> 0
+        let e = null;
+        e = Number(e);
+        console.log(e, typeof e);   // 0 number
+        // undefined -> NaN
+        let f = undefined;
+        f = Number(undefined);
+        console.log(f, typeof f);   // NaN number
+
+
+        // 除了Number()函数外，还有两个函数是专门用来将一个字符串转为数字的
+        // - parseInt()
+        // - 将一个字符串解析为一个整数
+        let g = '123px';
+        g = parseInt(g);
+        console.log(g, typeof g);   // 123 number
+        // - parseFloat()
+        // - 将一个字符串解析为一个浮点数
+        let h = '123.45px';
+        h = parseFloat(h);
+        console.log(h, typeof h);   // 123.45 number
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

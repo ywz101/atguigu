@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_字符串拼接</title>
+    <script>
+        /* 
+            任何值和字符串做加法时都会转为字符串
+                然后再进行字符串拼接
+            利用这个特点，可以为一个任意值加上空字符串的形式，将其转为字符串
+        */
+        let a = 'hello' + 123;
+        console.log(a, typeof a);   // 'hello123'   string
+        a = 1 + '2' + 3;            // 1 + '2' -> '12'   '12' + 3 -> '123'
+        console.log(a, typeof a);   // 123  string
+
+        // 利用这个特点，可以为一个任意值加上空字符串的形式，将其转为字符串
+        let b = 1;
+        b = b + '';
+        console.log(b, typeof b);   // 1    string
+
+
+        // 
+        let c = 340;
+        console.log('c = ' + c);    // c = 340
+        console.log('c =', c);      // c = 340
+        console.log(`c = ${c}`);    // c = 340
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_其他类型转换为布尔值</title>
+    <script>
+        let a = 10;
+        // 使用 Boolean() 函数将其他类型转为布尔值
+        a = Boolean(a);
+        console.log(a, typeof a);       // true     boolean
+        // 对于数字而言，所有错误的或没有的都会转为 false，其他都会转为 true
+
+        let b = 'hello';
+        b = Boolean(b);
+        console.log(b, typeof b);       // true     boolean
+        // '' -> false
+        let c = '';
+        c = Boolean(c);
+        console.log(c, typeof c);       // false    boolean
+        // null -> false
+        let d = null;
+        d = Boolean(d);
+        console.log(d, typeof d);       // false    boolean
+        // undefined -> false
+        let e = undefined;
+        e = Boolean(e);
+        console.log(e, typeof e);       // false    boolean
+        // 0 -> false 
+        let f = 0;
+        f = Boolean(f);
+        console.log(f, typeof f);       // false    boolean
+
+        // 一般情况下，对象都会转为 true
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

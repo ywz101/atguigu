@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_for循环练习 </title>
+</head>
+
+<body>
+    <script>
+
+        // 练习6：求100以内所有的奇数之和
+        // 创建一个变量存储结果
+        let sum = 0;
+        // 遍历获取100以内的所有数
+        for (let i = 0; i < 100; i++) {
+            // 判断i否为奇数
+            if (i % 2 !== 0) {
+                // 累加
+                sum += i;
+            }
+        }
+        // 打印输出sum值
+        console.log(sum);               // 2500
+
+
+        // 练习6 优化：
+        let sum2 = 0;
+        for (let i = 1; i < 100; i += 2) {
+            sum2 += i;
+        }
+        console.log(sum2);              // 2500
+    </script>
+</body>
+
+</html>

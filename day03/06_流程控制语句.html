@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_流程控制语句</title>
+</head>
+
+<body>
+    <script>
+        /*
+            代码默认是按照从上往下的顺序一行一行执行的
+                但是仅仅是这样的话，并不能满足开发需求
+
+            可以通过流程控制语句来改变程序执行的顺序：
+                条件判断语句
+                条件分支语句
+                循环语句
+
+
+
+            条件判断语句
+                语法：
+                    if (条件表达式) 
+                        语句
+                执行流程：
+                    if语句在执行时，先对条件表达式进行求值判断
+                        如果结果为 true, 则执行 if 后的语句
+                        如果结果为 false, 则不执行
+                注意：
+                    if语句默认只会控制紧随其后的那条语句，可以配合代码块控制多条语句
+                    对于我们来说，最佳实践是，即使if后仅有一条语句，最好也使用 {}
+                语法：
+                    if (条件表达式) {
+                        语句1;
+                        语句2;
+                        ...
+                    }
+                
+                如果条件表达式的结果是一个非布尔值，会转换为布尔值进行判断
+                
+        */
+        // let a = 30;
+        // if (a > 20)
+        //     alert('你猜我出来吗？');
+        // alert('我没有被上面的if语句控制控制');
+
+        let a = 40;
+        if (a > 20) {
+            alert('hello');
+            alert('world');
+        }
+    </script>
+</body>
+
+</html>

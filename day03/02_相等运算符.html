@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_相等、全等运算符</title>
+</head>
+
+<body>
+    <script>
+        /*
+            相等运算符
+                == 
+                    - 相等运算符用来比较两个值是否相等
+                        如果比较的两个值的类型不同，会将其转为和相同类型然后再比较
+                            - 通常情况下，不同类型都会转为Number然后再比较
+            
+            全等运算符
+                ===
+                    - 全等运算符用来检查两个值是否全等
+                    - 全等运算符不会发生自动的类型转换
+                        如果两个值的类型不同，直接返回 false
+
+            不相等
+                !=
+                    - 比较两个值是否不相等
+                    - 如果不相等返回 true，相等返回 false
+                    - 会做自动类型转换，将两个值转换为相同的类型然后再比较
+
+
+            不全等
+                !==
+                    - 比较两个值是否不全等
+                    - 如果不全等返回 true ，全等返回 false
+                    - 不会做自动类型转换，如果两个值的类型不同，直接返回 true
+        */
+
+
+        console.log(10 == 10);             // true
+        console.log('10' == 10);           // true
+        console.log(true == '1');          // true   true -> 1   '1' -> 1    1 == 1 -> true
+        console.log(null == undefined);    // true
+
+        // 特殊情况 NaN不等于NaN, NaN不和任何值相等
+        console.log(NaN == NaN);           // false
+        console.log(null == 0);            // false
+
+
+
+        console.log(true === 1);           // false
+        console.log(NaN === NaN);          // false
+
+
+
+        // 检查一个值是否是 NaN ，isNaN()函数
+        let num = NaN;
+        let num2 = undefined;
+        console.log(isNaN(num), isNaN(num2));           // true true
+
+    </script>
+</body>
+
+</html>
