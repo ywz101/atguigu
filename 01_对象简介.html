@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_对象简介</title>
+</head>
+
+<body>
+    <script>
+        /*
+            基本数据类型
+                - number string boolean null undefined
+                - 基本数据类型都是一个一个独立的值，
+                    值与值之间不存在任何的联系
+                    这样就导致我们无法在程序中来表示一些复杂的数据
+
+            对象 (object)
+                - 引用数据类型
+                - 对象就是JS中的一种数据类型 (引用数据类型)
+
+                - 对象相当于一个容器，在对象中可以存储不同类型的数据
+                    对象中存储的数据被称为 属性，向对象中添加数据称为添加属性
+                    - 当我们访问对象中没有的属性时，不会报错，而是返回 undefined
+
+            创建空对象：
+                new Object();
+
+            添加属性：
+                对象.属性名 = 属性值;
+
+            读取属性：
+                对象.属性名
+                注意：当读取到对象中没有的属性时，不会报错，而是返回 undefined
+
+            删除属性：
+                delete 对象.属性名
+
+        */
+
+        // 创建一个空的对象
+        let obj = new Object();
+        // 向对象中添加属性：对象.属性名 = 属性值;
+        obj.name = '鲁迅';
+        obj.age = 18;
+        obj.sex = '男';
+        console.log(obj);                       // {name: '鲁迅', age: 18, sex: '男'}
+        // 读取对象中的属性：对象.属性名;
+        console.log(obj.name);
+        // 读取对象中不存在的属性：undefined
+        console.log(obj.address);               // undefined
+        // 删除属性: delete 对象.属性名
+        delete obj.age;
+        console.log(obj.age);                   // undefined
+
+    </script>
+</body>
+
+</html>

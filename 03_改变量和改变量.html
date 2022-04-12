@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_改变量和改变量</title>
+</head>
+
+<body>
+    <script>
+        let a = 10;
+        let b = a;
+        // 当一个变量被修改时，只会影响它自己，对其它变量不会产生任何影响
+        a++;
+        console.log(`a = ${a}
+b = ${b}`);
+
+
+
+
+        // 
+        {
+            let obj = {};
+            obj.name = 'zs';
+            let obj2 = obj;
+            // 当我们对对象进行修改时(改对象)，如果有其他的变量同时指向该对象
+            // 则也会被影响到  
+            obj.name = 'ls';
+            obj2.name = 'shs';
+            console.log(obj);
+            console.log(obj2);
+            console.log(obj.name);
+        }
+    </script>
+</body>
+
+</html>

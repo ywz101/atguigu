@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_属性</title>
+</head>
+
+<body>
+    <script>
+        /*
+            属性
+                属性名：
+                    对象的属性是任意值，不必遵守标识符的规范
+                        但是如果起的名字太特殊，必须采取另外的方式进行命名
+                        对象['属性名'] = 属性值;
+                        读取属性的时候也要对应的格式: 对象['属性名'] 
+                    虽然如此，属性名发行量要遵循标识符的规范，且具有语义
+                    [变量]
+        */
+        // let obj = new Object();
+        let obj = Object();
+        obj.name = '李四';
+        // 属性名可以是 var 、let等关键字
+        obj.var = '张三';
+        obj['ao;jfroiawej@#24!'] = '王五';
+        console.log(obj.name);
+        console.log(obj.var);
+        console.log(obj['ao;jfroiawej@#24!']);
+
+        let a = 'name';
+        console.log(obj[a]);
+
+
+        /*
+            属性值：
+                对象的属性值可以是任意的数据类型
+        
+        */
+
+        obj.test = Object();
+        obj.test.name = '猪八戒';
+        console.log(obj);
+    </script>
+</body>
+
+</html>
