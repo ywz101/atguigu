@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_方法</title>
+</head>
+
+<body>
+    <script>
+        // 立即执行函数后一定要加分号 (;)
+        (function () {
+            console.log('匿名函数1');
+        }());
+
+        (function () {
+            console.log('匿名函数2');
+        }());
+
+        // 任何值都可以成为对象的属性, 函数也不例外
+        let obj = {
+            test: function () {
+                alert('我是obj中的函数');
+            }
+        }
+        console.log(obj.test);
+        // 使用 typeof 检查一个函数时，返回 function
+        console.log(typeof obj.test);
+        // 如果一个对象的属性是函数，则我们称这个函数是这个对象方法
+        obj.test();
+        // 函数和方法，目前只是称呼区别，没有本质区别
+        // 方法可以简写
+        let  obj2 = {
+            test() {
+                alert('我是obj2中的函数');
+            }
+        }
+        obj2.test();
+
+    </script>
+</body>
+
+</html>

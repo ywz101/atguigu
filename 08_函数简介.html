@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_函数简介</title>
+</head>
+
+<body>
+    <script>
+        /*
+            函数 (function)
+                - 函数也是一个对象和其他的对象功能一样
+                - 不同的是在函数中可以直接存储JS代码
+                    并且可以在我们需要的时候对这些代码进行反复的调用 
+
+
+            创建一个函数：
+                语法：
+                    function fn(形参) {
+                        语句;
+                    }
+                    fn(实参);
+        */
+
+        let al = function () {
+            alert('你好！')
+            alert('hello!');
+        }
+        console.log(al);
+        
+        // 对象的嵌套 
+        let als = function () {
+            alert('1');
+            al();
+        }
+        als();
+    </script>
+</body>
+
+</html>

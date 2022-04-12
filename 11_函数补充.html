@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_函数补充</title>
+</head>
+
+<body>
+    <script>
+        function fn(a, b) {
+            console.log(`a = ${a}`);
+            console.log(`b = ${b}`);
+        }
+
+        fn('hello', null);
+        fn('true', function () {
+            console.log('hello');
+        });
+
+        // 改变量和改对象
+        function fn2(a, b) {
+            console.log(a);             // 10 
+            b.name = 'ls';
+            console.log(b);             // {name: 'ls'}
+        }
+        let a = 10;
+        let b = { name: 'zs' };
+        fn2(a, b);
+        console.log(b);                 // {name: 'ls'}
+
+
+        // 对象中 return 一个对象
+        function fn3() {
+            return function () {
+                console.log('hello');
+            }
+        }
+        let res = fn3();
+        res();
+
+        // IIFE (立即执行函数)
+        // 立即执行函数，会在函数创建后立刻调用，并且只会调用一次
+        (function () {
+            console.log('world');
+        })();
+        (function () {
+            console.log('hahaha');
+        }());
+    </script>
+</body>
+
+</html>

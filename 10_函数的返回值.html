@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_函数的返回值</title>
+</head>
+
+<body>
+    <script>
+        /*
+            返回值:
+                - 返回值就是函数的执行结果
+                - 通过 return 来设置函数的返回值
+                    语法：return 值;
+                - 任何值都可以作为函数的返回值
+                - 如果不设置 return 或 return 不跟任何值
+                    则相当于 return undefineda;
+        */
+
+        function getSum(a, b) {
+            // return a + b;
+            // return;
+            return function () {
+                console.log('我是内部函数');
+            }
+        }
+        // 调用函数时，返回值就是函数执行的结果，可以定义一个变量来接收结果
+        let res = getSum();
+        res();
+
+
+        function fn2() {
+            console.log('函数开始执行了~~~');
+            for (let i = 0; i < 5; i++) {
+                if (i === 2) {
+                    return;
+                }
+                console.log(i);
+            }
+            console.log('函数执行结束了~~~');
+        }
+        fn2();
+    </script>
+</body>
+
+</html>

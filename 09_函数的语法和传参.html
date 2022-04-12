@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_函数的语法和传参</title>
+</head>
+
+<body>
+    <script>
+        /*
+            函数声明：
+                function 函数名(形参) {语句...};
+            
+            调用函数：  
+                函数名();
+                - 调用函数就是执行函数中存储的代码
+
+
+            函数表达式：(匿名函数)
+              let fn2 =  function () {语句...};
+
+            形参 (形式参数)
+                - 在定义函数时，可以在函数的 () 中指定数量不等的形参
+                - 定义形参就相当于在函数中声明了两个变量
+                    但是没有赋值
+
+
+            实参 (实际参数)
+                - 在调用函数时，可以在函数的 () 中传递数量不等的实参
+        */
+
+        function fn() {
+            console.log('hello');
+        }
+        fn();
+
+        let fn2 = function () {
+            console.log('world');
+        };
+        fn2();
+
+        // 定义一个函数可以用来求任意两个数的和
+        function getSum(a, b) {
+            return a + b;
+        }
+        console.log(getSum(3, 4));
+
+        const add = (x, y) => x + y;
+        console.log(add(1, 2));
+
+
+        function fn3(h, j) {
+            if (typeof h === 'number' && typeof j === 'number') {
+                return h + j;
+            } else {
+                alert('类型错误');
+            }
+        }
+        console.log(fn3(10, 4));
+    </script>
+</body>
+
+</html>
